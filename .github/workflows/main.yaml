@@ -1,5 +1,8 @@
 name: CI
 
+env:
+  DATABASE_URL: ${{secrets.DB_URL}}
+
 on:
   push:
     branches: [main]
