@@ -24,3 +24,7 @@ def reset_database():
     reset_db()
     print("reset db")
     return jsonify({ 'message': "ok" })
+
+@app.route("/ping")
+def ping():
+    return jsonify({ 'message': "pong" })
