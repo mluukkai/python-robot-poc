@@ -3,7 +3,7 @@
 echo "Running tests"
 
 # käynnistetään Flask-palvelin taustalle
-poetry run python3 app.py &
+poetry run flask run &
 
 echo "started Flask server"
 
@@ -15,7 +15,7 @@ done
 echo "Flask server is ready"
 
 # suoritetaan testit
-poetry run robot src/tests
+poetry run robot tests
 
 status=$?
 
