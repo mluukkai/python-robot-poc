@@ -1,0 +1,6 @@
+__pycache__
+*.log
+log.html
+output.xml
+.env
+report.html

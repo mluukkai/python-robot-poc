@@ -1,0 +1,10 @@
+Valitsit pizzan {{ pizza }}
+<p>
+Seuraavat lisät:
+<ul>
+  {% for extra in extras %}
+    <li> {{ extra }}
+  {% endfor %}
+</ul>
+Erikoistoiveet: <br>
+{{ message }}

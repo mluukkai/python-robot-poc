@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "miniproj-boiler"
+version = "0.1.0"
+description = ""
+authors = ["Matti Luukkainen <mluukkai@iki.fi>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+flask = "^3.0.3"
+flask-sqlalchemy = "^3.1.1"
+psycopg2-binary = "^2.9.9"
+getenv = "^0.2.0"
+python-dotenv = "^1.0.1"
+robotframework = "^7.1"
+robotframework-seleniumlibrary = "^6.6.1"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
