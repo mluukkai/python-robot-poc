@@ -7,6 +7,7 @@ ${SERVER}  localhost:5000
 ${DELAY}  0.5 seconds
 ${HOME_URL}  http://${SERVER}
 ${NEW_URL}  http://${SERVER}/new
+${ONE_URL}  http://${SERVER}/one
 #${BROWSER}  firefox
 ${BROWSER}  chrome
 
@@ -18,5 +19,5 @@ Open And Configure Browser
     Call Method  ${options}  add_argument  --headless
     Open Browser  browser=${BROWSER}  options=${options}
     Set Selenium Speed  ${DELAY}
-    Setup Database
-    Reset Application
+    #Setup Database
+    #Reset Application

@@ -1,7 +1,7 @@
 from flask import redirect, render_template, request, jsonify
 
 from setup import app
-from service import get_messages, create_message
+from service import get_messages, create_message, get_one
 from db_helper import reset_db, setup_db
 
 @app.route("/")
@@ -34,3 +34,9 @@ def reset_database():
 @app.route("/ping")
 def ping():
     return jsonify({ 'message': "pong" })
+
+@app.route("/one")
+def one():
+    data = get_one()
+    print(data[0][0])
+    return f"result {data[0][0]}"
