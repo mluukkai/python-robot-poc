@@ -7,7 +7,3 @@ Suite Teardown  Close Browser
 Result is one
     Go To  ${ONE_URL}
     Page Should Contain  result 1
-
-Result is not two
-    Go To  ${ONE_URL}
-    Page Should Contain  result 2

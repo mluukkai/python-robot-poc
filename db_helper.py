@@ -7,12 +7,12 @@ def reset_db():
   db.session.commit()
 
 def setup_db():
-  try:
-    sql = text("DROP TABLE messages")
-    db.session.execute(sql)
-    db.session.commit()
-  except:
-    pass
+  #try:
+  #  sql = text("DROP TABLE messages")
+  #  db.session.execute(sql)
+  #  db.session.commit()
+  #except:
+  #  pass
 
   command = """
   CREATE TABLE messages (

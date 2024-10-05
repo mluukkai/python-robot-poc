@@ -19,5 +19,5 @@ Open And Configure Browser
     Call Method  ${options}  add_argument  --headless
     Open Browser  browser=${BROWSER}  options=${options}
     Set Selenium Speed  ${DELAY}
-    #Setup Database
+    Setup Database
     #Reset Application
