@@ -3,7 +3,10 @@ import requests
 class AppLibrary:
     def __init__(self):
         self._base_url = "http://localhost:5000"
-        #self.reset_application()
+
+    def setup_database(self):
+        print("Setting up application")
+        requests.get(f"{self._base_url}/setup_db")
 
     def reset_application(self):
         print("Resetting application")
