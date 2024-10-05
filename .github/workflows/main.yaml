@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  DATABASE_URL: postgresql://postgres:postgres@$postgres:5432/postgres
+  DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
   #DATABASE_URL: ${{secrets.DB_URL}}
 
 on:
