@@ -20,4 +20,4 @@ Open And Configure Browser
     Open Browser  browser=${BROWSER}  options=${options}
     Set Selenium Speed  ${DELAY}
     Setup Database
-    #Reset Application
+    Reset Application
