@@ -8,13 +8,17 @@ ${DELAY}  0.5 seconds
 ${HOME_URL}  http://${SERVER}
 ${NEW_URL}  http://${SERVER}/new
 ${ONE_URL}  http://${SERVER}/one
-#${BROWSER}  firefox
 ${BROWSER}  chrome
+# ${BROWSER}  firefox
+# robot --variable BROWSER:firefox tests 
 
 *** Keywords ***
 Open And Configure Browser
-    #${options}  Evaluate  sys.modules['selenium.webdriver'].FirefoxOptions()  sys
-    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
+    IF         $BROWSER == 'chrome'
+        ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
+    ELSE IF    $BROWSER == 'firefox'
+        ${options}  Evaluate  sys.modules['selenium.webdriver'].FirefoxOptions()  sys
+    END
     # seuraava rivi on kommentoitu toistaiseksi pois
     Call Method  ${options}  add_argument  --headless
     Open Browser  browser=${BROWSER}  options=${options}
